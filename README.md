@@ -1,7 +1,7 @@
 # Assignment Submission Repository
 # pw.ds.pro.assignments
 
-This repository contains my submission for the [Full Stack Data Science Pro] at [[pwskills](https://learn.pwskills.com/)].
+This repository contains my submission for the [Full Stack Data Science Pro] at [[pwskills]([https://learn.pwskills.com/](https://pwskills.com/course/full-stack-data-science-pro))].
 
 ## Assignment Details
 
