@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask-SocketIO Notifications</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.js"></script>
+</head>
+<body>
+    <h1>Flask-SocketIO Notifications</h1>
+    <button onclick="sendNotification()">Send Notification</button>
+    <script>
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        function sendNotification() {
+            var message = prompt('Enter notification message:');
+            if (message !== null && message.trim() !== '') {
+                socket.emit('send_notification', message);
+            }
+        }
+
+        socket.on('receive_notification', function(message){
+            alert('Received Notification: ' + message);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Database and Table</title>
+</head>
+<body>
+    <h1>Select Database and Table</h1>
+    <form action="/read" method="POST">
+        <label for="database">Select Database:</label>
+        <select name="database">
+            {% for db in database1 %}
+            <option value="{{ db }}">{{ db }}</option>
+            {% endfor %}
+        </select>
+        <br>
+
+        <label for="table">Select Table:</label>
+        <select name="table">
+            {% for tbl in table1 %}
+            <option value="{{ tbl }}">{{ tbl }}</option>
+            {% endfor %}
+        </select>
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
